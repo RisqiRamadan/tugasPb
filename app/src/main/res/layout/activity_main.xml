@@ -1,0 +1,1169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/abuabu"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <!-- navgiasi bar.-->
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primaryColor">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_dior"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/diorfont"
+                android:text="DIOR"
+                android:textColor="@color/black"
+                android:textSize="22dp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="10dp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/btn_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:drawableEnd="@drawable/ic_cari"
+                android:fontFamily="@font/bakecil"
+                android:gravity="left|center"
+                android:text="What are you looking for?"
+                android:textAllCaps="false"
+                android:textColor="@color/coklat"
+                android:textSize="11.5dp" />
+
+            <RelativeLayout
+                android:layout_width="10dp"
+                android:layout_height="match_parent" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_gravity="center_vertical"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardCornerRadius="5dp">
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/iv_garis" />
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="15dp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <ScrollView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!-- header. -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/header" />
+
+            <!-- splash. -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="-100dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/splash"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="20dp">
+
+                        <ImageView
+                            android:id="@+id/iv_taswan"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:adjustViewBounds="true"
+                            android:cropToPadding="true"
+                            android:src="@drawable/taswan" />
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:id="@+id/tv_tlstas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:fontFamily="@font/akecil"
+                        android:gravity="center"
+                        android:text="Small CD Besace Bag"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_hrgataswan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:fontFamily="@font/arvobold"
+                        android:gravity="center"
+                        android:text="Rp 63.000.000,00"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/kuantitas"
+                        android:layout_width="17dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="@font/arvobold"
+                        android:gravity="center|bottom"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btn_min"
+                        android:clickable="true"
+                        android:layout_width="25dp"
+                        android:layout_height="28dp"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginTop="-25dp"
+                        android:background="@drawable/ic_min" />
+
+                    <Button
+                        android:id="@+id/btn_add"
+                        android:clickable="true"
+                        android:layout_width="25dp"
+                        android:layout_height="28dp"
+                        android:layout_marginLeft="95dp"
+                        android:layout_marginTop="-29dp"
+                        android:background="@drawable/ic_add" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- Radio  Butten. -->
+            <LinearLayout
+                android:layout_width="380dp"
+                android:layout_height="160dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="15dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="170dp"
+                    android:layout_height="125dp"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/radioBtn1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="FOR HIM" />
+
+                        <RadioButton
+                            android:id="@+id/radioBtn2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="FOR HER" />
+
+                        <RadioButton
+                            android:id="@+id/radioBtn3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="FOR KIDS" />
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_height="160dp"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:background="@drawable/diskon"
+                        android:layout_width="190dp"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
+            </LinearLayout>
+            <!-- koleksi. -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:fontFamily="@font/arvobold"
+                    android:gravity="center"
+                    android:text="SPRING-SUMMER 2024 COLLECTION"
+                    android:textSize="16dp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+            <!-- produk. -->
+            <LinearLayout
+                android:layout_width="360dp"
+                android:layout_height="230dp"
+                android:layout_marginLeft="15dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="15dp"
+                android:orientation="horizontal">
+
+                <!-- PRODUK 1 -->
+                <LinearLayout
+                    android:id="@+id/ll_produk1"
+                    android:tag="Cowo"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/duasplash"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="5dp">
+
+                            <ImageView
+                                android:layout_width="160dp"
+                                android:layout_height="160dp"
+                                android:layout_marginTop="5dp"
+                                android:adjustViewBounds="true"
+                                android:cropToPadding="true"
+                                android:src="@drawable/kmatapria" />
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="170dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp">
+
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/bakecil"
+                            android:gravity="center"
+                            android:text="NeoDior S4U"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="170dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp">
+
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/arvobold"
+                            android:gravity="center"
+                            android:text="Rp 10.500.000,00"
+                            android:textColor="@color/black"
+                            android:textSize="13.5dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent" />
+
+                <!-- PRODUK 2 -->
+                <LinearLayout
+                    android:id="@+id/ll_produk2"
+                    android:tag="Cowo"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/duasplash"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="5dp">
+
+                            <ImageView
+                                android:layout_width="160dp"
+                                android:layout_height="160dp"
+                                android:layout_marginTop="5dp"
+                                android:adjustViewBounds="true"
+                                android:cropToPadding="true"
+                                android:src="@drawable/sepatupria" />
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="170dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp">
+
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/bakecil"
+                            android:gravity="center"
+                            android:text="B9S Skater Sneaker"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="170dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp">
+
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/arvobold"
+                            android:gravity="center"
+                            android:text="Rp 43.000.000,00"
+                            android:textColor="@color/black"
+                            android:textSize="13.5dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="360dp"
+                android:layout_height="230dp"
+                android:layout_marginLeft="15dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="15dp"
+                android:orientation="horizontal">
+
+                <!-- PRODUK 3 -->
+                <LinearLayout
+                    android:id="@+id/ll_produk3"
+                    android:tag="Cewe"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/duasplash"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="5dp">
+
+                            <ImageView
+                                android:layout_width="160dp"
+                                android:layout_height="160dp"
+                                android:layout_marginTop="5dp"
+                                android:adjustViewBounds="true"
+                                android:cropToPadding="true"
+                                android:src="@drawable/bajupria" />
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="170dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp">
+
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/bakecil"
+                            android:gravity="center"
+                            android:text="Bobby Sweater"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="170dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp">
+
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/arvobold"
+                            android:gravity="center"
+                            android:text="Rp 41.000.000,00"
+                            android:textColor="@color/black"
+                            android:textSize="13.5dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent" />
+
+                <!-- PRODUK 4 -->
+                <LinearLayout
+                    android:id="@+id/ll_produk4"
+                    android:tag="Cowo"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/duasplash"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="5dp">
+
+                            <ImageView
+                                android:layout_width="160dp"
+                                android:layout_height="160dp"
+                                android:layout_marginTop="5dp"
+                                android:adjustViewBounds="true"
+                                android:cropToPadding="true"
+                                android:src="@drawable/kaospria" />
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="170dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp">
+
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/bakecil"
+                            android:gravity="center"
+                            android:text="Couture Fit T-Shirt"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="170dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp">
+
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/arvobold"
+                            android:gravity="center"
+                            android:text="Rp 20.000.000,00"
+                            android:textColor="@color/black"
+                            android:textSize="13.5dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="360dp"
+                android:layout_height="230dp"
+                android:layout_marginLeft="15dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="15dp"
+                android:orientation="horizontal">
+
+                <!-- PRODUK 5 -->
+                <LinearLayout
+                    android:id="@+id/ll_produk5"
+                    android:tag="Cowo"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/duasplash"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="5dp">
+
+                            <ImageView
+                                android:layout_width="160dp"
+                                android:layout_height="160dp"
+                                android:layout_marginTop="5dp"
+                                android:adjustViewBounds="true"
+                                android:cropToPadding="true"
+                                android:src="@drawable/topipria" />
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="170dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp">
+
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/bakecil"
+                            android:gravity="center"
+                            android:text="Dior Couture Cap"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="170dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp">
+
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/arvobold"
+                            android:gravity="center"
+                            android:text="Rp 11.500.000,00"
+                            android:textColor="@color/black"
+                            android:textSize="13.5dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent" />
+
+                <!-- PRODUK 6 -->
+                <LinearLayout
+                    android:id="@+id/ll_produk6"
+                    android:tag="Cewe"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/duasplash"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="5dp">
+
+                            <ImageView
+                                android:layout_width="160dp"
+                                android:layout_height="160dp"
+                                android:layout_marginTop="5dp"
+                                android:adjustViewBounds="true"
+                                android:cropToPadding="true"
+                                android:src="@drawable/sendalpria" />
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="170dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp">
+
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/bakecil"
+                            android:gravity="center"
+                            android:text="Khaki Dia Canvas"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="170dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp">
+
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/arvobold"
+                            android:gravity="center"
+                            android:text="Rp 16.000.000,00"
+                            android:textColor="@color/black"
+                            android:textSize="13.5dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="360dp"
+                android:layout_height="230dp"
+                android:layout_marginLeft="15dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="15dp"
+                android:orientation="horizontal">
+
+                <!-- PRODUK 7 -->
+                <LinearLayout
+                    android:id="@+id/ll_produk7"
+                    android:tag="Cewe"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/duasplash"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="5dp">
+
+                            <ImageView
+                                android:layout_width="160dp"
+                                android:layout_height="160dp"
+                                android:layout_marginTop="5dp"
+                                android:adjustViewBounds="true"
+                                android:cropToPadding="true"
+                                android:src="@drawable/sepatuw" />
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="170dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp">
+
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/bakecil"
+                            android:gravity="center"
+                            android:text="D-Joy Ballet Flat"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="170dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp">
+
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/arvobold"
+                            android:gravity="center"
+                            android:text="Rp 15.500.000,00"
+                            android:textColor="@color/black"
+                            android:textSize="13.5dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent" />
+
+                <!-- PRODUK 8 -->
+                <LinearLayout
+                    android:id="@+id/ll_produk8"
+                    android:tag="Cewe"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/duasplash"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="5dp">
+
+                            <ImageView
+                                android:layout_width="160dp"
+                                android:layout_height="160dp"
+                                android:layout_marginTop="5dp"
+                                android:adjustViewBounds="true"
+                                android:cropToPadding="true"
+                                android:src="@drawable/bajuwanita" />
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="170dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp">
+
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/bakecil"
+                            android:gravity="center"
+                            android:text="D Mariniere Twinset"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="170dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp">
+
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/arvobold"
+                            android:gravity="center"
+                            android:text="Rp 39.000.000,00"
+                            android:textColor="@color/black"
+                            android:textSize="13.5dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="360dp"
+                android:layout_height="230dp"
+                android:layout_marginLeft="15dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="15dp"
+                android:orientation="horizontal">
+
+                <!-- PRODUK 9 -->
+                <LinearLayout
+                    android:id="@+id/ll_produk9"
+                    android:tag="Kids"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/duasplash"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="5dp">
+
+                            <ImageView
+                                android:layout_width="160dp"
+                                android:layout_height="160dp"
+                                android:layout_marginTop="5dp"
+                                android:adjustViewBounds="true"
+                                android:cropToPadding="true"
+                                android:src="@drawable/babyboy" />
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="170dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp">
+
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/bakecil"
+                            android:gravity="center"
+                            android:text="Baby Boys Set"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="170dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp">
+
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/arvobold"
+                            android:gravity="center"
+                            android:text="Rp 15.000.000,00"
+                            android:textColor="@color/black"
+                            android:textSize="13.5dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent" />
+
+                <!-- PRODUK 10 -->
+                <LinearLayout
+                    android:id="@+id/ll_produk10"
+                    android:tag="Kids"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/duasplash"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="5dp">
+
+                            <ImageView
+                                android:layout_width="160dp"
+                                android:layout_height="160dp"
+                                android:layout_marginTop="5dp"
+                                android:adjustViewBounds="true"
+                                android:cropToPadding="true"
+                                android:src="@drawable/babygirl" />
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="170dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp">
+
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/bakecil"
+                            android:gravity="center"
+                            android:text="Baby Girls Set"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="170dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp">
+
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/arvobold"
+                            android:gravity="center"
+                            android:text="Rp 16.000.000,00"
+                            android:textColor="@color/black"
+                            android:textSize="13.5dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="360dp"
+                android:layout_height="230dp"
+                android:layout_marginLeft="15dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="15dp"
+                android:orientation="horizontal">
+
+                <!-- PRODUK 11 -->
+                <LinearLayout
+                    android:id="@+id/ll_produk11"
+                    android:tag="Kids"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/duasplash"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="5dp">
+
+                            <ImageView
+                                android:layout_width="160dp"
+                                android:layout_height="160dp"
+                                android:layout_marginTop="5dp"
+                                android:adjustViewBounds="true"
+                                android:cropToPadding="true"
+                                android:src="@drawable/kaoskakibb" />
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="170dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp">
+
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/bakecil"
+                            android:gravity="center"
+                            android:text="Kid's High Socks"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="170dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp">
+
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/arvobold"
+                            android:gravity="center"
+                            android:text="Rp 3.500.000,00"
+                            android:textColor="@color/black"
+                            android:textSize="13.5dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent" />
+
+                <!-- PRODUK 12 -->
+                <LinearLayout
+                    android:id="@+id/ll_produk12"
+                    android:tag="Kids"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/duasplash"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="5dp">
+
+                            <ImageView
+                                android:layout_width="160dp"
+                                android:layout_height="160dp"
+                                android:layout_marginTop="5dp"
+                                android:adjustViewBounds="true"
+                                android:cropToPadding="true"
+                                android:src="@drawable/ikatrambutbg" />
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="170dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp">
+
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/bakecil"
+                            android:gravity="center"
+                            android:text="Kid's Scrunchies"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="170dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp">
+
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/arvobold"
+                            android:gravity="center"
+                            android:text="Rp 4.000.000,00"
+                            android:textColor="@color/black"
+                            android:textSize="13.5dp" />
+
+                        <TextView
+                            android:id="@+id/tvresult"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="result" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottommenu"
+        android:background="@color/primaryColor"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"/>
+</LinearLayout>
